@@ -1,36 +1,47 @@
-import * as React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Image, StyleSheet, Text, View, Button } from "react-native";
+import "react-native-gesture-handler";
+import Login from "./src/components/Login";
+import Register from "./src/components/Register";
 
-const instructions = Platform.select({
-  ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
-  android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
-});
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to React Native!</Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-      <Text style={styles.instructions}>{instructions}</Text>
-    </View>
+    <>
+      <View style={styles.container1}>
+        <Image
+          source={require("./src/assets/logo1.png")}
+          style={{ height: 250, width: 250, resizeMode: "stretch" }}
+        />
+        <Text style={{ fontSize: 20, padding: 5 }}>we are what we eat</Text>
+      </View>
+      <View style={styles.container2}>
+        <Register />
+        <Login />
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container1: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    marginTop: 150,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  container2: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignContent: "space-around",
+    alignItems: "center",
+    backgroundColor: "white",
+    marginBottom: 200,
   },
 });
