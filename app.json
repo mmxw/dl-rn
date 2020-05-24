@@ -1,0 +1,17 @@
+{
+  "name": "frontend_rn",
+  "displayName": "frontend_rn",
+  "expo": {
+    "name": "frontend_rn",
+    "slug": "expo-template-bare",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
