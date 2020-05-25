@@ -22,7 +22,16 @@ const styles = StyleSheet.create({
   },
   home: {
     backgroundColor: 'white',
+  },
+  form: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "stretch",
+    marginTop: 100,
+    paddingHorizontal:60
   }
+  
+
 });
 
 export default styles;
